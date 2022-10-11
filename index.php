@@ -19,7 +19,9 @@ echo '<br> Vitesse du vélo : ' . $bike->getCurrentSpeed . ' km/h' . '<br>';
 echo $bike->brake();
 
 
+
 $vehicle->getCurrentSpeed = 0;
+echo $vehicle->start();
 echo $vehicle->forward();
 echo '<br> Vitesse de la voiture : ' . $vehicle->getCurrentSpeed . ' km/h' . '<br>';
 echo $vehicle->brake();

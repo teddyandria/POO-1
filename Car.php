@@ -15,7 +15,10 @@ class Car
         $this->nbSeats = $nbSeats;
         $this->energy = $energy;
     }
-   
+   public function start() : string
+   {
+    return "Car ready !!!";
+   }
     public function forward(): string
     {
         $this->currentSpeed = 15;
