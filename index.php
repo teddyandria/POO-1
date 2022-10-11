@@ -4,7 +4,7 @@ require_once 'Bicycle.php';
 require_once 'Car.php';
 
 $bike = new Bicycle('Blue');
-$vehicle = new Car('Red', 5, 30);
+$tesla = new Car('Red', 5, 30);
 
 
 var_dump($bike);
@@ -20,11 +20,11 @@ echo $bike->brake();
 
 
 
-$vehicle->getCurrentSpeed = 0;
-echo $vehicle->start();
-echo $vehicle->forward();
-echo '<br> Vitesse de la voiture : ' . $vehicle->getCurrentSpeed . ' km/h' . '<br>';
-echo $vehicle->brake();
-echo '<br> Vitesse de la voiture : ' . $vehicle->getCurrentSpeed . ' km/h' . '<br>';
-echo $vehicle->brake();
+$tesla->getCurrentSpeed = 0;
+echo $tesla->start();
+echo $tesla->forward();
+echo '<br> Vitesse de la voiture : ' . $tesla->getCurrentSpeed . ' km/h' . '<br>';
+echo $tesla->brake();
+echo '<br> Vitesse de la voiture : ' . $tesla->getCurrentSpeed . ' km/h' . '<br>';
+echo $tesla->brake();
 
