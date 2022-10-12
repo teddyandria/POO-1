@@ -2,29 +2,25 @@
 
 require_once 'Bicycle.php';
 require_once 'Car.php';
+require_once 'Truck.php';
 
-$bike = new Bicycle('Blue');
-$tesla = new Car('Red', 5, 30);
-
-
-var_dump($bike);
-
-$bike->getCurrentSpeed = 0;
-var_dump($bike);
-
-echo $bike->forward();
-echo '<br> Vitesse du vélo : ' . $bike->getCurrentSpeed . ' km/h' . '<br>';
-echo $bike->brake();
-echo '<br> Vitesse du vélo : ' . $bike->getCurrentSpeed . ' km/h' . '<br>';
-echo $bike->brake();
+$bicycle = new Bicycle('Blue', 1);
+echo $bicycle->forward();
 
 
+$car = new Car('green', 4, 'electric');
+echo $car->forward();
 
-$tesla->getCurrentSpeed = 0;
-echo $tesla->start();
-echo $tesla->forward();
-echo '<br> Vitesse de la voiture : ' . $tesla->getCurrentSpeed . ' km/h' . '<br>';
-echo $tesla->brake();
-echo '<br> Vitesse de la voiture : ' . $tesla->getCurrentSpeed . ' km/h' . '<br>';
-echo $tesla->brake();
+$scania = new Truck('pink', 3, 'electric', 100);
+echo $scania->full(100);
+echo $scania->forward();
+echo $scania->brake();
 
+var_dump($scania);
+
+$camion = new Truck('white', 3, 'fuel', 250);
+echo $camion->full(250);
+echo $camion->forward();
+echo $camion->brake();
+
+var_dump($camion);
