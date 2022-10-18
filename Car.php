@@ -11,12 +11,9 @@ class Car extends Vehicle
 
     private string $loading;
 
-    
-
     public function __construct(string $color, int $nbSeats, string $energy)
     {
         parent::__construct($color, $nbSeats, $energy);
-        
     }
 
     public function getEnergy(): string
