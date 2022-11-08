@@ -4,6 +4,9 @@ require_once 'Vehicle.php';
 
 class Car extends Vehicle
 {
+
+    private bool $hasParkBrake;
+
     public const ALLOWED_ENERGIES = [
         'fuel',
         'electric',
@@ -23,7 +26,7 @@ class Car extends Vehicle
 
     public function setEnergy(string $energy): Car
     {
-        if (in_array($energy, self::ALLOWED_ENERGIES)){
+        if (in_array($energy, self::ALLOWED_ENERGIES)) {
             $this->energy = $energy;
         }
         return $this;
@@ -37,5 +40,10 @@ class Car extends Vehicle
     public function setEnergyLevel(int $energyLevel): void
     {
         $this->energyLevel = $energyLevel;
+    }
+
+    public function setParkBrake(bool $hasParkBrake): void
+    {
+        $this->parkBrake = $hasParkBrake;
     }
 }
