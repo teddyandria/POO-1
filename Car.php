@@ -4,6 +4,8 @@ require_once 'Vehicle.php';
 
 class Car extends Vehicle
 {
+
+    private bool $hasParkBrake;
     public const ALLOWED_ENERGIES = [
         'fuel',
         'electric',
@@ -37,5 +39,24 @@ class Car extends Vehicle
     public function setEnergyLevel(int $energyLevel): void
     {
         $this->energyLevel = $energyLevel;
+    }
+
+    public function getParkBrake(): bool
+    {
+        return $this->hasParkBrake;
+    }
+
+    public function setParkBrake(bool $hasParkBrake): void
+    {
+        $this->hasParkBrake = $hasParkBrake;
+    }
+    public function start(): string
+    {
+        if ($this->getParkBrake() === true) {
+            throw new Exception('attetion ');
+        } else {
+            $this->currentSpeed = 15;
+            return 'Let\'s go';
+        }
     }
 }

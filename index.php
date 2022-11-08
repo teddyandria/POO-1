@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 require_once 'Bicycle.php';
 require_once 'Car.php';
@@ -16,6 +16,16 @@ $skate = new Skateboard('white', 1);
 // echo $bicycle->forward();
 
 $car = new Car('green', 4, 'electric');
+$polo = new Car('black', 4, 'fuel');
+
+try {
+    echo $polo->start();
+} catch (Exception $e) {
+    echo $e->getMessage() . ', retire le frein à main';
+    $polo->setParkBrake(false);
+} finally {
+    echo PHP_EOL . 'Ma voiture roule comme un donut';
+}
 // echo $car->forward();
 
 // $scania = new Truck('pink', 3, 'electric', 100);
